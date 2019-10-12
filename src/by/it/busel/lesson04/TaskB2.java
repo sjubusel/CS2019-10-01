@@ -1,5 +1,7 @@
 package by.it.busel.lesson04;
 
+import java.util.Scanner;
+
 /*
 Таблица умножения
 Вывести на экран таблицу умножения size х size используя цикл while.
@@ -24,5 +26,26 @@ size прочитать c клавиатуры. Числа разделить п
 3. Программа должна выводить таблицу умножения size х size.
  */
 public class TaskB2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int y, x;
+        /*for (y =1; y <=size; y++){
+            for (x=1; x<=size; x++){
+                System.out.print((y*x) + " ");
+            }
+            System.out.println();
+        }*/
+        y=1;
+        while(y<=size){
+            x=1;
+            while(x<=size){
+                System.out.print((y*x) +" ");
+                x++;
+            };
+            y++;
+            System.out.println();
+        }
+    }
 
 }
