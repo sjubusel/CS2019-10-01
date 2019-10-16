@@ -10,6 +10,25 @@ package by.it.busel.lesson05;
 */
 
 
-public class TaskB1 {
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import org.w3c.dom.ls.LSOutput;
 
+import java.util.ArrayList;
+
+public class TaskB1 {
+    public static void main(String[] args) {
+        ArrayList<String> arraylist = new ArrayList<>();
+        arraylist.add("Привет, ");
+        arraylist.add("как твои дела? ");
+        arraylist.add("Всё в порядке? ");
+        arraylist.add("Что-то беспокоит? ");
+        arraylist.add("Вы уверены?");
+        int alSize = arraylist.size();
+        System.out.println(alSize);
+        int i = 0;
+        while (i < alSize) {
+            System.out.println(arraylist.get(i));
+            i++;
+        }
+    }
 }

@@ -19,6 +19,53 @@ Index of last element=1
 
 */
 
-public class TaskB3 {
+import java.util.Scanner;
 
+public class TaskB3 {
+    public static void main(String[] args) {
+        // initialition of an Array, which contains only integer data type
+        int[] numbers = new int[10];
+        Scanner scanner = new Scanner(System.in);
+        // filling of the above-mentioned Array with integers, which have been inputted from the keyboard
+        int i, j, a;
+        for (i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        // printing the array "numbers"
+        /*for (i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i]+" ");
+        }*/
+        // creating of new two variables, which contain the first and last
+        int firstnumber = numbers[0];
+        int lastnumber = numbers[numbers.length - 1];
+        /*System.out.println(firstnumber + " " + lastnumber);*/
+        // sorting of the array "numbers" from min value to max value
+        for (i = 1; i < numbers.length; i++) {
+            for (j = numbers.length - 1; j >= i; j--) {
+                if (numbers[j - 1] > numbers[j]) {
+                    a = numbers[j - 1];
+                    numbers[j - 1] = numbers[j];
+                    numbers[j] = a;
+                }
+            }
+        }
+        // printing sorted array "numbers"
+        /*for (i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }*/
+        int currentIndexOf1stnumber = 0, currentIndexOfLastnumber = 0;
+        for (i = 0; i < numbers.length; i++) {
+            if (numbers[i] == firstnumber) {
+                currentIndexOf1stnumber = i;
+                continue;
+            }
+            if (numbers[i] == lastnumber) {
+                currentIndexOfLastnumber = i;
+            }
+        }
+        System.out.println("Index of first element=" + currentIndexOf1stnumber);
+        System.out.println("Index of last element=" + currentIndexOfLastnumber);
+
+
+    }
 }
