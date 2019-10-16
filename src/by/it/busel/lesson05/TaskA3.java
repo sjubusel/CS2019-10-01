@@ -13,6 +13,31 @@ package by.it.busel.lesson05;
 0 9
 */
 
-public class TaskA3 {
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
+import javax.crypto.spec.PSource;
+import java.util.Scanner;
+
+public class TaskA3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        for (int i = 0; i < array.length; i = i + 1 /*or i += 1 or i++*/) {
+            array[i] = scanner.nextInt();
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+        int min, max;
+        min = max = array[0];
+        for (int i = 1; i < array.length; i++){
+            if (array[i] < min) {
+                min = array[i];
+            }
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        System.out.println(min + " " + max);
+
+    }
 }
