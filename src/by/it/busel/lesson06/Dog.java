@@ -1,8 +1,8 @@
 package by.it.busel.lesson06;
 
 public class Dog {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public String getName() {
         return name;
@@ -20,9 +20,19 @@ public class Dog {
         this.age = inputtedAge;
     }
 
+    @Override
     public String toString() {
         //метод должен вернуть строку экземляра класса в виде форматированной строки
         //Пример:
         return "Кличка: " + this.getName() + ". Возраст: " + this.getAge();
     }
+
+/*    public Dog() {
+
+    }
+
+    public Dog(String inputtedName, int inputtedAge) {
+        this.name = inputtedName;
+        this.age = inputtedAge;
+    }*/
 }
