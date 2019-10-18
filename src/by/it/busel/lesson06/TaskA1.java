@@ -28,7 +28,15 @@ package by.it.busel.lesson06;
 */
 
 
-
 public class TaskA1 {
-
+    public static void main(String[] args) {
+        Dog dogSharik = new Dog();
+        Dog dogTuzik = new Dog();
+        dogSharik.setName("Шарик");
+        dogTuzik.setName("Тузик");
+        dogSharik.setAge(5);
+        dogTuzik.setAge(3);
+        System.out.println(dogSharik.getName() + " " + dogSharik.getAge());
+        System.out.println(dogTuzik.getName() + " " + dogTuzik.getAge());
+    }
 }
